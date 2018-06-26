@@ -1,0 +1,47 @@
+
+# Starting your day based on the day of the week
+
+days = ['S','M','T','W','T','F','Sa']
+
+days.each do |i|
+IF i == days.first || i == days.last
+    puts "sleep in late"
+    else
+    wake up early
+    get ready for work
+END
+
+#Calculating tip
+case service
+WHEN worst
+  "no tip"
+
+WHEN good
+  "tip = cost * 0.20"
+
+WHEN great
+  "tip = cost * 0.25"
+
+ELSE
+  "tip = cost * 0.15"
+END
+
+#Working on checkpoints
+
+  create a repository and directory
+
+IF I know how to solve the problem
+
+work on the checkpoint
+  submit
+
+IF checkpoint approved
+  start on next checkpoint
+ELSE
+  working_on_checkpoint()
+
+ELSE
+  Ask my mentor or post my question on slack
+    working_on_checkpoint()
+  END
+END
