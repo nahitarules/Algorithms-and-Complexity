@@ -1,0 +1,25 @@
+1. Since we have to check every element until we find G, we have
+to iterate 7 times before we find the desired element using linear
+search.
+
+2. It only takes 3 iterations using binary search to find the last
+element in a sorted array with length 7.
+
+3. fib(10) = 55
+   fib(11) = 89
+   fib(12) = 144
+
+#Recursive vs Iterative
+
+1. If the array is unsorted linear search is the way to go.
+I would choose iterative solution over recursive solution my
+reason behind it is since recursive solution requires calculating
+earlier solutions every time we calculate the next solution it takes
+more computing time over iterative solution.
+
+2. If the array is sorted, binary search comes in handy, this is
+because we only have to search either the lower or upper half
+which cuts the amount of elements to check by half.Since the
+number of iterations is significantly low in binary search
+the performance of both recursive solution is slightly faster
+than iterative.
