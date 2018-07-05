@@ -1,0 +1,23 @@
+1. The worst case scenario for the algorithm is constant time
+O(1) because it only goes through the function once and prints
+whatever is passed.
+
+2.  The number of operations is directly related to the size
+of the collection, so as the list size increases the number of
+operations the method takes to execute and finish grows linearly
+O(n).
+
+3. In case of a two dimensional array we have to iterate through
+two array which makes the execution time  linear complexity
+squared, which is the same as linear complexity O(n^2).
+
+4. The complexity of a recursive fibonacci sequence is exponential
+this is because the method has to go through earlier operations
+to get to the present one O(2^n)
+
+5. This function iterates n - 1 times which makes the complexity
+of the function, O(n).
+
+6. Another recursive method which execution time increases
+exponentially as n increases linearly the worst case complexity
+is O(2^n) 
