@@ -1,25 +1,19 @@
-def quick_sort(arr)
-  pivot = arr.last
-  lastIndex = arr.length - 1
-  j = 0
-
-  for i in (0..lastIndex)
-    if arr.nil?
-      return nil
-    elsif arr[i] <= pivot
-      arr[j], arr[i] = arr[i], arr[j]
-      j++
+def quick_sort(array)
+  if array.length <= 1
+    return array
+  else
+    pivot = array.last
+    less = []
+    more =[]
+    array.pop
+    array.each do |x|
+      x <= pivot ? less.push(x) : more.push(x)
     end
+    return quick_sort(less) + [pivot] + quick_sort(more)
   end
-  arr[j + 1], arr[lastIndex] = arr[lastIndex], arr[j + 1]
-
-  left = arr[0,j]
-  right = arr[j + 1, lastIndex]
-
-  if left.length > 0
-    quick_sort(left)
-  elsif right.length > 0
-    quick_sort(right)
-  end
-    return arr = [*left, *right]
 end
+
+my_arr = [3,67,14,5,6,9,10,19,11]
+
+sorted = quick_sort(my_arr)
+puts sorted
