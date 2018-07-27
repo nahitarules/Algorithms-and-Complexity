@@ -1,42 +1,21 @@
-=begin
-def heap_sort(arr)
-  len = arr.length
-  n = len/2
+def heap_sort(arr, n)
+  mid = n/2
 
-  n.downto(1) do |i|
-    heapify(arr, i)
+  (mid - 1).downto(1) do |j|
+    heapify(arr, n, j)
   end
 
-  len.downto(2) do |j|
-    arr[1], arr[j] = arr[j], arr[1]
-    len -= 1
-    heapify(arr, 1)
-  end
+  (n - 1).downto(0) do |i|
+    arr[0], arr[i] = arr[i], arr[0]
 
-  arr
-end
-=end
-
-def heap_sort(arr)
-  n = arr.length
-  build_heap(arr)
-
-  n.downto(2) do |i|
-    arr[1], arr[i] = arr[i], arr[1]
-    n -= 1
-    heapify(arr, 1)
+    heapify(arr, i, 0)
   end
-end
-def build_heap(arr)
-  n = arr.length/2
-  n.downto(0) do |i|
-    heapify(arr, i)
-  end
-  arr
+  puts arr
 end
 
 
-def heapify(arr,i)
+
+def heapify(arr, n, i)
 
   n = arr.length - 1
   largest = i
@@ -51,7 +30,7 @@ def heapify(arr,i)
 
   if largest != i
     arr[i], arr[largest] = arr[largest], arr[i]
-    heapify(arr, largest)
+    heapify(arr, n, largest)
 
   end
 
@@ -59,6 +38,7 @@ end
 
 
 my_arr = [3,67,14,5,6,9,10,19,11]
+n = my_arr.length
 
-sorted = heap_sort(my_arr)
+sorted = heap_sort(my_arr, n)
 puts sorted
