@@ -10,14 +10,13 @@ def heap_sort(arr, n)
 
     heapify(arr, i, 0)
   end
-  puts arr
+   arr
 end
 
 
 
 def heapify(arr, n, i)
 
-  n = arr.length - 1
   largest = i
   l = (2 * i) + 1
   r = l + 1
